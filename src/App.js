@@ -88,14 +88,14 @@ const App = () => {
               OnChange={onChange}
           />
         </div>
-        <Button Text={"등록"} FontColor={"green"} OnClick={()=>onclick} />
+        <Button Text={"등록"} />
       </form>
       <div>
         <ul>
           {data.array.map(info => (
             <li key={info.id}>
               {info.title}({info.content})
-              <button onClick={() => onRemove(info.id)}>삭제</button>
+              <Button Text={"삭제"} FontColor={"red"} OnClick={()=>onRemove(info.id)}/>
             </li>
           ))}
         </ul>

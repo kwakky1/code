@@ -1,20 +1,19 @@
 import React from 'react';
 
-class Text extends React.Component {
-  render() {
+const Text = (props) => {
+
     return (
       <>
         <div
           style={{
-            color: this.props.TextColor,
-            margin: this.props.Margin
+            color: props.TextColor,
+            margin: props.Margin
           }}
         >
-          {this.props.TextTitle}
+          {props.TextTitle}
         </div>
       </>
     )
-  }
 }
 
 export default Text;
